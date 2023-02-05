@@ -4,50 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Box, Container, Text, Heading } from 'theme-ui';
 import BlockTitle from 'components/block-title';
 import Image from 'components/image';
-
-import img1 from 'assets/testi-1-1.png';
-import img2 from 'assets/testi-1-2.png';
-import img3 from 'assets/testi-1-3.png';
+import { testimonials_data } from 'data/testimonials';
 
 SwiperCore.use([Thumbs, Autoplay]);
 
-const TESTIMONIALS_DATA = [
-  {
-    image: img1,
-    heading: 'Pierre Hackett',
-    designation: 'VP of Engineering',
-    content:
-      'They are doing amazing job with hundred percent customer satisfaction, Love their work and would like to work with them again',
-  },
-  {
-    image: img2,
-    heading: 'Natalia Sanz',
-    designation: 'Head of Technology',
-    content:
-      'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster.',
-  },
-  {
-    image: img3,
-    heading: 'Ece Akman',
-    designation: 'Senior Marketer',
-    content:
-      'Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal.',
-  },
-  {
-    image: img2,
-    heading: 'Natalia Sanz',
-    designation: 'Head of Technology',
-    content:
-      'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional.',
-  },
-  {
-    image: img3,
-    heading: 'Ece Akman',
-    designation: 'Senior Marketer',
-    content:
-      'Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base.',
-  },
-];
 
 const Testimonials = () => {
   // store thumbs swiper instance
@@ -86,8 +46,8 @@ const Testimonials = () => {
     <Box as="section" id="testimonials" sx={styles.testimonials}>
       <Container>
         <BlockTitle
-          slogan="Customer Comments"
-          title="Why customers love us"
+          slogan={testimonials_data.slogan.es}
+          title={testimonials_data.title.es}
           styles={styles.blockTitle}
         />
         <Swiper
@@ -95,7 +55,7 @@ const Testimonials = () => {
           thumbs={{ swiper: thumbsSwiper }}
           {...contentParams}
         >
-          {TESTIMONIALS_DATA.map((testimonialText, index) => (
+          {testimonials_data.data.es.map((testimonialText, index) => (
             <SwiperSlide key={`testimonial-content-${index}`}>
               <Text sx={styles.testimonialsContent} as="p">
                 {testimonialText.content}
@@ -111,7 +71,7 @@ const Testimonials = () => {
           watchSlidesProgress
           {...infoParams}
         >
-          {TESTIMONIALS_DATA.map((testimonial, index) => (
+          {testimonials_data.data.es.map((testimonial, index) => (
             <SwiperSlide key={`testimonial-info-${index}`}>
               <Image src={testimonial.image} alt="testimonials image" />
               <Heading as="h3">{testimonial.heading}</Heading>
