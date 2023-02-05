@@ -27,7 +27,7 @@ const Banner = () => {
               </Button>
             </Box>
             <Box sx={styles.partner}>
-              <Text as="span">Sponsored by:</Text>
+              <Text as="span">{banner.trusted.es}</Text>
               <Box as="div">
                 <Image src={img1} alt="" />
               </Box>

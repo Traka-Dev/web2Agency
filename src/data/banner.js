@@ -10,5 +10,9 @@ export const banner = {
     actionBtn: {
         en: "Schedule a meeting",
         es: "Agenda una cita",
+    },
+    trusted: {
+        en: "Trusted By",
+        es: "Clientes"
     }
 }
