@@ -3,49 +3,19 @@ import { Box, Container, Grid, Heading, Text } from 'theme-ui';
 import BlockTitle from 'components/block-title';
 import Image from 'components/image';
 
-import icon1 from 'assets/icons/service-1-1.svg';
-import icon2 from 'assets/icons/service-1-2.svg';
-import icon3 from 'assets/icons/service-1-3.svg';
-import icon4 from 'assets/icons/service-1-4.svg';
-
-const SERVICES_DATA = [
-  {
-    icon: icon1,
-    title: 'Unlimited Customization',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-  {
-    icon: icon2,
-    title: 'Vector shape & resizable',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-  {
-    icon: icon3,
-    title: 'Editing freedom',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-  {
-    icon: icon4,
-    title: 'Best Award history',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-];
+import { services_data } from 'data/services';
 
 const Services = () => {
   return (
     <Box sx={styles.services} id="services">
       <Container>
         <BlockTitle
-          slogan="Quality features"
-          title="Meet exciting feature of app"
+          slogan={services_data.slogan.es}
+          title={services_data.title.es}
           styles={styles.blockTitle}
         />
         <Grid sx={styles.grid}>
-          {SERVICES_DATA.map((service, index) => (
+          {services_data.services.es.map((service, index) => (
             <Box
               className="service-card"
               sx={styles.serviceCard}

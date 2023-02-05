@@ -12,7 +12,7 @@ export const banner = {
         es: "Agenda una cita",
     },
     trusted: {
-        en: "Trusted By",
-        es: "Clientes"
+        en: "Business Partners",
+        es: "Socios Comerciales"
     }
 }
