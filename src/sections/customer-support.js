@@ -5,6 +5,7 @@ import { Link } from 'components/link';
 import Image from 'components/image';
 
 import img1 from 'assets/cta-2-1.png';
+import { customer_data } from 'data/customer';
 
 const CustomerSupport = () => {
   return (
@@ -14,21 +15,14 @@ const CustomerSupport = () => {
           <Box sx={styles.col}>
             <Box sx={styles.content}>
               <Heading as="h3">
-                Free Customer Support to ensure what you like to expect
+                {customer_data.title.es}
               </Heading>
               <Text as="p">
-                We offer a risk-free trial period of up to two weeks. You will
-                only have to pay if you are happy with the developer and wish to
-                continue. If you are unsatisfied, we’ll refund payment or fix
-                issues on our dime period customers.
+                {customer_data.subtitle.es}
               </Text>
               <Text as="p" sx={styles.specialText}>
-                If you are happy with the developer and wish to continue. If you
-                are unsatisfied, we’ll refund payment or fix issues.
-              </Text>
-              <Link path="/" sx={styles.link}>
-                Learn more <FaAngleRight />
-              </Link>
+               {customer_data.subtitle2.es}
+              </Text>             
             </Box>
           </Box>
           <Box sx={styles.col}>
