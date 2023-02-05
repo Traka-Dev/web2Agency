@@ -22,17 +22,9 @@ export default function Footer() {
         <Box sx={styles.left}>
           <Logo />
           <Text as="p">
-            &copy; {new Date().getFullYear()} All right reserved - Design &
-            Developed by RedQ, Inc
+            &copy; {new Date().getFullYear()} All right reserved
           </Text>
-        </Box>
-        <Box sx={styles.right}>
-          <Link path="/" label="Home" />
-          <Link path="/" label="Adversite" />
-          <Link path="/" label="Supports" />
-          <Link path="/" label="Marketing" />
-          <Link path="/" label="FAQ" />
-        </Box>
+        </Box>       
       </Container>
     </footer>
   );
@@ -42,9 +34,12 @@ const styles = {
   left: {
     display: 'flex',
     flexDirection: ['column', null, 'row'],
+    width: "100vw",    
     alignItems: 'center',
+    justifyContent: "center",
     p: {
       fontSize: [0, 1],
+      paddingInline: 10,
       color: 'black',
       opacity: 0.6,
       mt: ['10px', null, '0'],
