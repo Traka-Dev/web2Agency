@@ -7,7 +7,7 @@ import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'components/link';
 import { Facebook, Twitter, Github, Dribbble } from 'components/customIcon';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-import menuItems from './header.data';
+import { header } from 'data/header';
 import Logo from 'components/logo';
 import LogoDark from 'assets/logo.svg';
 
@@ -58,7 +58,7 @@ const MobileDrawer = () => {
         <Box sx={styles.content}>
           <Logo src={LogoDark} />
           <Box sx={styles.menu}>
-            {menuItems.map(({ path, label }, i) => (
+            {header.menu.es.map(({ path, label }, i) => (
               <ScrollLink
                 activeClass="active"
                 to={path}
